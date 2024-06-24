@@ -1,0 +1,22 @@
+print("UNIVERSIDAD ESTATAL AMAZONICA")
+str(input('Nombre Cliente:'))
+str(input('Mes:'))
+int(input('Año:'))
+str(input('Institucion Bancaria: '))
+
+class CuentaBancaria :
+    def __init__(self, titular, saldo):
+        self.__titular = titular
+        self.__saldo = saldo
+
+    def depositar(self, cantidad):
+        self.__saldo += cantidad
+
+    def obtener_saldo(self):
+        return self.__saldo
+
+cuenta = CuentaBancaria("Juan", 1000)
+cuenta.depositar(500)
+print(cuenta.obtener_saldo())  # Output: 1500  
+  
+  
